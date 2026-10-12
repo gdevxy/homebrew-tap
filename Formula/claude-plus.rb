@@ -5,23 +5,23 @@ class ClaudePlus < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/gdevxy/claude-plus/releases/download/v0.2.2/claude-plus-aarch64-apple-darwin.tar.gz"
-      sha256 "6f75b8aabe33372bf87a90bf2916e50f0eb5f5a45a36e8f9664c3c28c70da947"
+      url "https://github.com/gdevxy/claude-plus/releases/download/v0.3.0/claude-plus-aarch64-apple-darwin.tar.gz"
+      sha256 "0417792f3db129be353132931818ece3b04d3438a5fe6008f3974c291982445e"
     end
     on_intel do
-      url "https://github.com/gdevxy/claude-plus/releases/download/v0.2.2/claude-plus-x86_64-apple-darwin.tar.gz"
-      sha256 "1333f2967981f7624d110255be31e42e4a094f6aaf1a7cbb70206370277ee904"
+      url "https://github.com/gdevxy/claude-plus/releases/download/v0.3.0/claude-plus-x86_64-apple-darwin.tar.gz"
+      sha256 "e12b2a954dc5d5ff89c53bb44b6bff368367402de3e797d81db5611935ff3621"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/gdevxy/claude-plus/releases/download/v0.2.2/claude-plus-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "d107d4387d0088bcd36fa0bde1d764663c2e5a949498c00ba4257fc3a19514cc"
+      url "https://github.com/gdevxy/claude-plus/releases/download/v0.3.0/claude-plus-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "ff68e1191c386efc010f5f04d11bd28adf1c617faa449d6a61659cd732c209a7"
     end
     on_intel do
-      url "https://github.com/gdevxy/claude-plus/releases/download/v0.2.2/claude-plus-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "4985d4c3443241f522b314001a0fdeefc3a1a5b2bcdb5394c0baa260568e3850"
+      url "https://github.com/gdevxy/claude-plus/releases/download/v0.3.0/claude-plus-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "0e13e047bc4096d485aeaf9dd4bc89bc2f51139fc5c5f5a818b84fbb11d64294"
     end
   end
 
@@ -32,7 +32,7 @@ class ClaudePlus < Formula
   def caveats
     <<~EOS
       Run claude-plus install to add the pane to Claude Code.
-      After an upgrade, the next Claude Code session updates the pane, and the sessions after it show the new one.
+      After an upgrade, the next Claude Code session updates the pane and reloads it; sessions already open show it after /reload-plugins.
       Run claude-plus uninstall before brew uninstall claude-plus, or Claude Code keeps a mod whose binary is gone.
     EOS
   end
